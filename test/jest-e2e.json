@@ -1,0 +1,19 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@app/hello-world/(.*)": "<rootDir>/../libs/hello-world/src/$1",
+    "@app/hello-world": "<rootDir>/../libs/hello-world/src",
+    "@app/request-decorator/(.*)": "<rootDir>/../libs/request-decorator/src/$1",
+    "@app/request-decorator": "<rootDir>/../libs/request-decorator/src"
+  }
+}
