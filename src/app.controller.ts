@@ -1,6 +1,6 @@
 import { Controller, Get, Logger } from '@nestjs/common';
 import { AppService } from './app.service';
-import { CustomHeader } from '@app/request-decorator/custom-header.decorator';
+import { CustomHeader } from '@alexmdv/request-decorator';
 
 @Controller()
 export class AppController {
