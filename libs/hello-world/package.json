@@ -1,0 +1,25 @@
+{
+  "name": "@alexmdv/hellow-world",
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "!**/*.json",
+    "!**/*.tsbuildinfo",
+    "CHANGELOG.md"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@nestjs/common": "10.x",
+    "@nestjs/core": "10.x"
+  },
+  "scripts": {
+    "lib:clean": "rimraf dist",
+    "lib:build": "npm run lib:clean && tsc -p tsconfig.lib.json",
+    "lib:pack": "npm pack",
+    "publish:beta": "npm run lib:build && npm publish --access public --tag beta",
+    "publish:pro": "npm run lib:build && npm publish --access public"
+  }
+}
